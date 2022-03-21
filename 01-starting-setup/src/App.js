@@ -1,48 +1,46 @@
-import { useState } from "react/cjs/react.production.min";
-import Expenses from "./components/Expenses/Expenses";
-import NewExpense from "./components/NewExpense/NewExpense";
+import React, { useState } from 'react';
 
-// Hard-Coded Expenses to start the project:
+import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses/Expenses';
+
+// dummy hard-coded expenses
 const DUMMY_EXPENSES = [
-{
-  id: "e1",
-  title: "Toilet Paper",
-  amount: 94.12,
-  date: new Date(2022, 7, 14),
-},
-{ id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
-{
-  id: "e3",
-  title: "Car Insurance",
-  amount: 294.67,
-  date: new Date(2021, 2, 28),
-},
-{
-  id: "e4",
-  title: "New Desk (Wooden)",
-  amount: 450,
-  date: new Date(2021, 5, 12),
-},
-]
+  {
+    id: 'e1',
+    title: 'Toilet Paper',
+    amount: 94.12,
+    date: new Date(2020, 7, 14),
+  },
+  { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: 'e3',
+    title: 'Car Insurance',
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: 'e4',
+    title: 'New Desk (Wooden)',
+    amount: 450,
+    date: new Date(2021, 5, 12),
+  },
+];
 
+const App = () => {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
-function App() {
-
-  const [expense, setExpense] = useState(DUMMY_EXPENSES, setEx);
-
-  function addExpenseHandler(expense) {
-    setExpense(prevExpenses => {
-      return [expense, ...prevExpenses]
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
     });
-  }
+  };
 
   return (
     <div>
-      <h2>01: Set Up Project </h2>
-      <NewExpense onAddExpense={addExpenseHandler}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
-)
-}
+  );
+};
 
 export default App;
