@@ -5,10 +5,13 @@ import "./CourseInput.css";
 
 const CourseInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
-  const [inputIsValid, setinputIsValid] = useState(true);
+  const [isInputValid, setIsInputValid] = useState(true);
   // by default, we trust that the input is valid
 
   const goalInputChangeHandler = (event) => {
+    if (event.target.value.trim().length > 0 ) {
+      setIsInputValid(true);
+    }
     setEnteredValue(event.target.value);
   };
 
@@ -16,7 +19,7 @@ const CourseInput = (props) => {
     event.preventDefault();
     // Check if the input is empty
     if (enteredValue.trim().length === 0) {
-      setinputIsValid(false); // the input is NOT valid
+      setIsInputValid(false); // the input is NOT valid
       return; // if the result is 0, the next line of code won't be executed
     }
     props.onAddGoal(enteredValue);
@@ -25,8 +28,17 @@ const CourseInput = (props) => {
   return (
     <form onSubmit={formSubmitHandler}>
       <div className="form-control">
-        <label>Course Goal</label>
-        <input type="text" onChange={goalInputChangeHandler} />
+        <label style={{ color: !isInputValid ? "red" : "black" }}>
+          Course Goal
+        </label>
+        <input
+          style={{ 
+            borderColor: !isInputValid ? "red" : "black" ,
+            background: !isInputValid ? "salmon" : "transparent"
+            }}
+          type="text"
+          onChange={goalInputChangeHandler}
+        />
       </div>
       <Button type="submit">Add Goal</Button>
     </form>
