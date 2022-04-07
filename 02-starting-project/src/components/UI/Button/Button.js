@@ -13,6 +13,7 @@ import styled from "styled-components";
 // Button Rebuilt using Styled Components (imported)
 
 const Button = styled.button`
+  width: 100%;
   font: inherit;
   padding: 0.5rem 1.5rem;
   border: 1px solid #8b005d;
@@ -20,6 +21,10 @@ const Button = styled.button`
   background: #8b005d;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
   cursor: pointer;
+    
+  @media (min-width: 768px) {
+    width: auto;
+  }
 
   &:focus {
     outline: none;
@@ -31,6 +36,7 @@ const Button = styled.button`
     border-color: #ac0e77;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
   }
+
 `;
 
 export default Button;
