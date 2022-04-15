@@ -10,10 +10,10 @@ const App = () => {
     { text: "Finish the course!", id: "g2" },
   ]);
 
-  const addGoalHandler = (enteredText) => {
+  const addGoalHandler = (enteredText,goalId) => {
     setCourseGoals((prevGoals) => {
       const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: "goal1" });
+      updatedGoals.unshift({ text: enteredText, id: goalId });
       return updatedGoals;
     });
   };
