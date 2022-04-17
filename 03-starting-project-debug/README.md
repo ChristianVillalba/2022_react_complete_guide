@@ -44,8 +44,9 @@ Because the error message clearly tells where it is and how to solve it.
 Now other common mistakes that are often made are, for example       
 typos or incorrect names.
 
+Conclusion: when receiving an Error Message:
 Don't panic,       
-Read error messages,         
+Read Error Messages,         
 Look at the line or the file it's coming from,          
 Look at the code snippet it might be showing you,       
 Look at the problematic code snippet,      
@@ -54,3 +55,21 @@ Connect the error message to the snippet it's pointing at,
 ... and you will be able to solve most errors.
 
 ## Analyzing Code Flow and Warnings 
+
+Other kind of errors won't lead to a compilation errors         
+and won't show up on the main screen nor the terminal.
+So how can we now solve such errors?
+
+Example: unwanted behaviour in the deleteion functionality:
+
+Let's first of all go to the place where we have that deletion logic (App.js)       
+In this case, the deletion logic in general it's working but it deletes the wrong item.       
+
+Maybe the ID is wrong.      
+So maybe we should go to the place where the IDs are generated and assigned (addGoalHandler).   
+Here there is (was) a problem: a hard code id: "goal1"
+
+Previously here we used math random       
+to derive a pseudo unique ID.     
+Now with the hard-coded string     
+I introduced a logical error here.      
