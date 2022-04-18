@@ -69,7 +69,19 @@ Maybe the ID is wrong.
 So maybe we should go to the place where the IDs are generated and assigned (addGoalHandler).   
 Here there is (was) a problem: a hard code id: "goal1"
 
-Previously here we used math random       
-to derive a pseudo unique ID.     
-Now with the hard-coded string     
-I introduced a logical error here.      
+Previously here we used math random to derive a pseudo unique ID.         
+Now with the hard-coded string there is a logical error here:                 
+**The Error** is that I assigned **the same ID to all goals**.        
+So therefore they're **no** longer **distinguishable by ID**.       
+
+That's a **logical mistake**         
+and I was able to narrow it down by going through that complete **chain of events**.
+
+This is other way that could help us:       
+When adding a Goal Item, lets look at the console:      
+We recevied some **warnings and errors** that are thrown by the library       
+which don't crash the whole application necessarily.       
+The warining states that we have two children with the same key.         
+This is implicity related to our deletion problem,        
+because if we got two children with the same ID (and same key)        
+then we seem to have an error in our code (that will cause problems later on)       
