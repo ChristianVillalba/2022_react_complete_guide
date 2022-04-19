@@ -44,7 +44,7 @@ Because the error message clearly tells where it is and how to solve it.
 Now other common mistakes that are often made are, for example       
 typos or incorrect names.
 
-Conclusion: when receiving an Error Message:
+**Conclusion:** when receiving an Error Message:        
 Don't panic,       
 Read Error Messages,         
 Look at the line or the file it's coming from,          
@@ -84,4 +84,43 @@ which don't crash the whole application necessarily.
 The warining states that we have two children with the same key.         
 This is implicity related to our deletion problem,        
 because if we got two children with the same ID (and same key)        
-then we seem to have an error in our code (that will cause problems later on)       
+then we seem to have an error in our code (that will cause problems later on).       
+
+In the **warning** we receive, we can even see that "goal1", the hard-coded key/id is the **problem**.
+
+## Debugging using Breakpoints
+
+We have the problem that we have the hard-coded ID.       
+Let's say we didn't use any of the other two approaches.          
+We overlooked that warning,         
+and we don't know why it's behaving incorrectly.            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
