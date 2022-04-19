@@ -95,11 +95,19 @@ Let's say we didn't use any of the other two approaches.
 We overlooked that warning,         
 and we don't know why it's behaving incorrectly.            
 
+If you can't find the error or if you just prefer this approach:        
+Inspect > Sources      
+That includes your JavaScript code.    
 
+This React development process, (this NPM start script in our Terminal),      
+pushes code to the browser that is executable by the browser.       
+But it also gives the browser extra information     
+which the browser DevTools are able to pick up          
+to allow us to actually debug our code in the raw form we wrote it in.  
 
-
-
-
+So this React development process, gives the browser a bridge,      
+between the code that runs in the browser and the code we wrote.       
+and we can access this code here in the **sources tab**,
 
 
 
