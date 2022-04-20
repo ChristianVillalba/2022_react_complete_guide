@@ -109,16 +109,16 @@ So this React development process, gives the browser a bridge,
 between the code that runs in the browser and the code we wrote.       
 and we can access this code here in the **sources tab**,
 
+And then we could always dive into the different parts that you wanna analyze,        
+and add a **Breakpoint** (rigth click on the line of code),        
+In this case, that _deleteHandler_ function       
+which is triggered when we click on the list item.      
 
+Once you add such a **breakpoint**,      
+when execute the action that triggers that code part where the breakpoint is placed.     
+The code execution stops once it reaches that break point line.      
 
-
-
-
-
-
-
-
-
+And now, we can step through our code step by step.
 
 
 
