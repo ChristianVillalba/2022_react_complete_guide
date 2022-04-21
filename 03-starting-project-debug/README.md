@@ -57,7 +57,7 @@ Connect the error message to the snippet it's pointing at,
 ## Analyzing Code Flow and Warnings 
 
 Other kind of errors won't lead to a compilation errors         
-and won't show up on the main screen nor the terminal.
+and won't show up on the main screen nor the terminal.        
 So how can we now solve such errors?
 
 Example: unwanted behaviour in the deleteion functionality:
@@ -86,7 +86,8 @@ This is implicity related to our deletion problem,
 because if we got two children with the same ID (and same key)        
 then we seem to have an error in our code (that will cause problems later on).       
 
-In the **warning** we receive, we can even see that "goal1", the hard-coded key/id is the **problem**.
+In the **warning** we receive, we can even see that "goal1",         
+the hard-coded key/id is the **problem**.
 
 ## Debugging using Breakpoints
 
@@ -115,10 +116,18 @@ In this case, that _deleteHandler_ function
 which is triggered when we click on the list item.      
 
 Once you add such a **breakpoint**,      
-when execute the action that triggers that code part where the breakpoint is placed.     
-The code execution stops once it reaches that break point line.      
+when execute the action that triggers that code part where the breakpoint is placed,      
+The code execution stops once it reaches that break point line.    
+And now, we can step through our code step by step.     
 
-And now, we can step through our code step by step.
+In this case, we have a problem when when we try to delete an Item,    
+So we add a Breakpoint to onDelete method in CourseGoalItem.js ,       
+When we call this method, that means, when we try to delete an Item,     
+The Execution will stop there and we can manually go to the next function that will be triggered.     
+
+And you can also hover over variables here to see the values that are currently stored in them.      
+in this case, lets go to the next function triggered: _deleteItemHandler _
+if we hover on **goalId** we will see "goal1", our **hard-coded key/id**. 
 
 
 
