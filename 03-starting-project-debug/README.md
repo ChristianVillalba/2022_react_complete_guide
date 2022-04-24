@@ -129,11 +129,14 @@ And you can also hover over variables here to see the values that are currently 
 in this case, lets go to the next function triggered: _deleteItemHandler _
 if we hover on **goalId** we will see "goal1", our **hard-coded key/id**. 
 
+To finish our debugging cycle (debuggind this item) we can now "resume script execution",       
+and simply try this again and click on the next goal (item),        
+and see that here we have the same goalId as before.       
+if we have to same ID on two different goals when I clicked them,       
+that seems to be the problem why the wrong goal was deleted.
 
-
-
-
-
+We should dive back into the code where we actually add goals         
+because that is where we set our IDs.       
 
 
 
