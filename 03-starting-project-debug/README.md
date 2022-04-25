@@ -138,9 +138,14 @@ that seems to be the problem why the wrong goal was deleted.
 We should dive back into the code where we actually add goals         
 because that is where we set our IDs.       
 
+So this is how we can use the **breakpoints** to step for our codes step by step      
+and inspect values stored in variables and so on       
+to find out why something behaves the way it does behave.      
 
+**Breakpoints** are another useful tool for analyzing our code, for understanding it,
+and for finding and fixing errors
 
-
+## Debugging using Breakpoints
 
 
 
