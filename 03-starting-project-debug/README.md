@@ -142,10 +142,20 @@ So this is how we can use the **breakpoints** to step for our codes step by step
 and inspect values stored in variables and so on       
 to find out why something behaves the way it does behave.      
 
-**Breakpoints** are another useful tool for analyzing our code, for understanding it,
+**Breakpoints** are another useful tool for analyzing our code, for understanding it,       
 and for finding and fixing errors
 
-## Debugging using Breakpoints
+## React DevTools
 
+**React Dev Tools**: they're a browser extension, which we can add to the browser (Chrome is recommended).          
+You can simply search for **React Dev Tools** and you should find an entry here on chrome.google.com        
+In our browser dev tools, we'll have two new tabs: Components and Profiler        
 
+### Components
 
+In the browser, we got the **Elements Tab** and there we see the entire DOM,     
+that is implied by our Components.      
+So that can also be useful for debugging our DOM and our UI.     
+
+In the **Components** Tab we only see React Components and the Components structure,     
+that is responsible for this UI output.      
