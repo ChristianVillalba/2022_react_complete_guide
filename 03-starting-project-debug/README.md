@@ -153,9 +153,40 @@ In our browser dev tools, we'll have two new tabs: Components and Profiler
 
 ### Components
 
-In the browser, we got the **Elements Tab** and there we see the entire DOM,     
-that is implied by our Components.      
-So that can also be useful for debugging our DOM and our UI.     
+In the browser, we got the **Elements Tab** and there we see the entire DOM,        
+that is implied by our Components.         
+So that can also be useful for debugging our DOM and our UI.           
 
-In the **Components** Tab we only see React Components and the Components structure,     
-that is responsible for this UI output.      
+In the **Components** Tab we only see React Components and the Components structure,        
+that is responsible for this UI output.         
+
+We can click on the components and get more information about them:
+
+#### Props
+Example: _CourseGoalItem_ Component, we can see **a list of all props** that it's getting,       
+including the **children props**, all the content passed between the opening and closing tag.       
+
+#### Rendered by
+We can  see which Components were responsible for **rendering** this.        
+And these Components are ordered, depending on how close they are.        
+The top most Component, is the Component which directly rendered _CourseGoalItem_.        
+And the further down we go, the further away that Component is, in the main Component tree.         
+In this case: _CourseGoalItem_ was rendered by the **CourseGoalList** that was rendered by **App**        
+
+#### Source
+
+We also see the source code, where we can find information about the _CourseGoalItem_ .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
