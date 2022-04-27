@@ -8,13 +8,26 @@ Instructor: Maximilian Schwarzmüller
 
 This project It's an expense tracker created using React.
 
-We can see our expenses, and filtered them by year.       
+We can see our expenses, showing the concept, the date and the amount.        
+The expenes can be filtered by year.        
+There is a chart, divided by months that shows in a visual our expenses. 
 We can also add a new expenses using a Form        
-and if I add a new expense, it shows up and the chart updates.        
+When a new expense is added, it shows up and the chart updates.        
 
 ## What I have learnt with this project
 * JSX
 * React Components
 * Props
 * Adding CSS
+* Styling React Components
 * Composition: Children props
+* Listening to Events & Event Handlers
+* State
+* Hook: useState
+* Form Inputs
+* Multiple States
+* States that depends on other states
+* Handling Form Submission
+
+---
+---
