@@ -171,17 +171,27 @@ We can  see which Components were responsible for **rendering** this.
 And these Components are ordered, depending on how close they are.        
 The top most Component, is the Component which directly rendered _CourseGoalItem_.        
 And the further down we go, the further away that Component is, in the main Component tree.         
-In this case: _CourseGoalItem_ was rendered by the **CourseGoalList** that was rendered by **App**        
+In this case: _CourseGoalItem_ was rendered by the **CourseGoalList** that was rendered by **App**  
+
+If we  CourseGoalList or App, we're taken to that Component.
 
 #### Source
 
 We also see the source code, where we can find information about the _CourseGoalItem_ .
 
+#### Other Tools
 
+We can also search for a Component in the Search Bar.     
+And we can also configure what we see in the DevTools:     
+The general theme, how it should be displayed and in general, we can play around with the settings.      
 
+#### Hooks
 
-
-
+The Components that use Hooks such as _CourseInput_, will show, not only the props,           
+but also see the hooks that are being used here.        
+In this case we are using two state Hooks.       
+And here we can see and also change the current State.       
+We can change the State here and it really will have an effect on the UI.
 
 
 
