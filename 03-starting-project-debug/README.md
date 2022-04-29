@@ -142,10 +142,61 @@ So this is how we can use the **breakpoints** to step for our codes step by step
 and inspect values stored in variables and so on       
 to find out why something behaves the way it does behave.      
 
-**Breakpoints** are another useful tool for analyzing our code, for understanding it,
+**Breakpoints** are another useful tool for analyzing our code, for understanding it,       
 and for finding and fixing errors
 
-## Debugging using Breakpoints
+## React DevTools
+
+**React Dev Tools**: they're a browser extension, which we can add to the browser (Chrome is recommended).          
+You can simply search for **React Dev Tools** and you should find an entry here on chrome.google.com        
+In our browser dev tools, we'll have two new tabs: Components and Profiler        
+
+### Components
+
+In the browser, we got the **Elements Tab** and there we see the entire DOM,        
+that is implied by our Components.         
+So that can also be useful for debugging our DOM and our UI.           
+
+In the **Components** Tab we only see React Components and the Components structure,        
+that is responsible for this UI output.         
+
+We can click on the components and get more information about them:
+
+#### Props
+Example: _CourseGoalItem_ Component, we can see **a list of all props** that it's getting,       
+including the **children props**, all the content passed between the opening and closing tag.       
+
+#### Rendered by
+We can  see which Components were responsible for **rendering** this.        
+And these Components are ordered, depending on how close they are.        
+The top most Component, is the Component which directly rendered _CourseGoalItem_.        
+And the further down we go, the further away that Component is, in the main Component tree.         
+In this case: _CourseGoalItem_ was rendered by the **CourseGoalList** that was rendered by **App**  
+
+If we  CourseGoalList or App, we're taken to that Component.
+
+#### Source
+
+We also see the source code, where we can find information about the _CourseGoalItem_ .
+
+#### Other Tools
+
+We can also search for a Component in the Search Bar.     
+And we can also configure what we see in the DevTools:     
+The general theme, how it should be displayed and in general, we can play around with the settings.      
+
+#### Hooks
+
+The Components that use Hooks such as _CourseInput_, will show, not only the props,           
+but also see the hooks that are being used here.        
+In this case we are using two state Hooks.       
+And here we can see and also change the current State.       
+We can change the State here and it really will have an effect on the UI.
+
+
+
+
+
 
 
 
